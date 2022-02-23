@@ -1,4 +1,5 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons'
+import { useState } from 'react'
 import React from 'react'
 import styled from 'styled-components'
 import img1 from '../images/img_1.jpeg'
@@ -27,11 +28,18 @@ const Arrow = styled.div`
     margin: auto;
     cursor: pointer;
     opacity: 0.5;
+    z-index: 2;
+    transition: all .2s;
+    
+    &:hover {
+        opacity: 1;
+    }
 `
 
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
+    transform: translateX(0);
 `
 
 const Slide = styled.div` 
@@ -78,9 +86,20 @@ const Btn = styled.button `
 `
 
 const Slider = () => {
+
+    const [slideIndex, setSlideIndex] = useState(0);
+
+    function handleClick(direction) {
+
+    }
+
+
     return (
         <Container>
-            <Arrow direction="left">
+            <Arrow 
+                direction="left"
+                onClick={() => handleClick("left")}
+            >
                 <ArrowLeftOutlined />
             </Arrow>
             <Wrapper>
@@ -94,7 +113,7 @@ const Slider = () => {
                         <Btn> Shop Now!</Btn>
                     </InfoContainer>
                 </Slide>
-                <Slide>
+                <Slide bg="f5f3fd">
                     <ImgContainer>
                         <Image src={img1} />
                     </ImgContainer>
@@ -115,7 +134,10 @@ const Slider = () => {
                     </InfoContainer>
                 </Slide>
             </Wrapper>
-            <Arrow direction="right">
+            <Arrow 
+                direction="right"
+                onClick={() => handleClick("right")}
+            >
                 <ArrowRightOutlined />
             </Arrow>
         </Container>
