@@ -2,6 +2,7 @@ export const sliderItems = [
     {
         id: 1,
         title: "Spring Sale", 
+        img: 'data:image:/png;base64,img_1',
         desc: "Don't compromise on style! Get Flat 30% off for new arrivals",
         bg: "f5fafd"
     },
@@ -15,6 +16,6 @@ export const sliderItems = [
         id: 3,
         title: "Valentine Sale",
         desc: "Get something special for that special someone! Up to 40% off our Valentine's Day Collection",
-        bg: "fcf1ed"
+        bg: "fbf0f4"
     }
 ]

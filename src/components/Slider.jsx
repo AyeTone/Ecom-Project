@@ -3,6 +3,7 @@ import { useState } from 'react'
 import React from 'react'
 import styled from 'styled-components'
 import img1 from '../images/img_1.jpeg'
+import { sliderItems } from '../data'
 
 const Container = styled.div`
     width: 100%;
@@ -103,36 +104,19 @@ const Slider = () => {
                 <ArrowLeftOutlined />
             </Arrow>
             <Wrapper>
-                <Slide bg="f5fafd">
+                {sliderItems.map(item => (
+                <Slide bg={item.bg}>
                     <ImgContainer>
-                        <Image src={img1} />
+                        <Image src={item.img} />
                     </ImgContainer>
                     <InfoContainer>
-                        <Title> Spring Sale</Title>
-                        <Desc> Don't compromise on style. Get Flat 30% off for enw arrivals</Desc>
+                        <Title>{item.title}</Title>
+                        <Desc> {item.desc}</Desc>
                         <Btn> Shop Now!</Btn>
                     </InfoContainer>
                 </Slide>
-                <Slide bg="f5f3fd">
-                    <ImgContainer>
-                        <Image src={img1} />
-                    </ImgContainer>
-                    <InfoContainer>
-                        <Title> Popular Sale</Title>
-                        <Desc> Don't compromise on style. Get Flat 30% off for enw arrivals</Desc>
-                        <Btn> Shop Now!</Btn>
-                    </InfoContainer>
-                </Slide>
-                <Slide>
-                    <ImgContainer>
-                        <Image src={img1} />
-                    </ImgContainer>
-                    <InfoContainer>
-                        <Title> SUMMER Sale</Title>
-                        <Desc> Don't compromise on style. Get Flat 30% off for enw arrivals</Desc>
-                        <Btn> Shop Now!</Btn>
-                    </InfoContainer>
-                </Slide>
+                    
+                ))}
             </Wrapper>
             <Arrow 
                 direction="right"
