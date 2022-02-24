@@ -22,4 +22,22 @@ export const sliderItems = [
     }
 ]
 
+export const categories = [
+    {
+        id: 1,
+        img: 'https://images.unsplash.com/photo-1503342394128-c104d54dba01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjF8fHdvbWFuJTIwbW9kZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+        title: "Shirt Style!"
+    },
+    {
+        id: 2,
+        img: 'https://images.unsplash.com/photo-1500336624523-d727130c3328?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+        title: 'Lougewear Love'
+    },
+    {
+        id: 3,
+        img: 'https://images.unsplash.com/photo-1541823709867-1b206113eafd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2787&q=80',
+        title: 'Light Jackets'
+    }
+]
+
 
