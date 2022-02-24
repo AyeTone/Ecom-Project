@@ -27,6 +27,7 @@ const FilterText = styled.span`
 const Select = styled.select `
     margin: 0 20px;
     padding: 5px 10px;
+    text-align: center;
 `
 const Option = styled.option ``
 
