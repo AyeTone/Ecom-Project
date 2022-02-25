@@ -5,19 +5,31 @@ import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Newsletter from '../components/Newsletter'
+import { mobile } from '../responsive'
 
 const Container = styled.div``
+
 const Wrapper = styled.div`
     padding: 50px;
     display: flex;
+    ${mobile({
+        padding: '10px',
+        flexDirection: 'column',
+        textAlign: 'center'
+    })}
 `
 const ImgContainer = styled.div`
     flex: 1;
 `
-const Image = styled.div`
+const Image = styled.img`
     width: 100%;
     height: 90vh;
     object-fit: cover;
+
+    ${mobile({
+        height: '40vh',
+        objectFit: 'contain'
+    })}
 `
 const InfoContainer = styled.div`
     flex: 1;
@@ -39,6 +51,10 @@ const FilterContainer = styled.div`
     margin: 30px 0;
     display: flex;
     justify-content: space-between;
+
+    ${mobile({
+        width: '100%'
+    })}
 `
 const Filter = styled.div`
     display: flex;
@@ -68,6 +84,9 @@ const AddContainer= styled.div`
     justify-content: space-between;
     align-items: center;
     
+    ${mobile({
+        width: '100%',
+    })}
 `
 const AmountContainer= styled.div`
     display: flex;
@@ -99,6 +118,7 @@ const Button = styled.button`
     }
 `
 
+
 const Product = () => {
     return (
         <Container>
@@ -106,7 +126,7 @@ const Product = () => {
             <Announcement />
             <Wrapper>
                 <ImgContainer>
-                    <Image src="" />
+                    <Image src="https://images.unsplash.com/photo-1618354691438-25bc04584c23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fHQlMjBzaGlydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" />
                 </ImgContainer>
                 <InfoContainer>
                     <Title> Best Thing</Title>
