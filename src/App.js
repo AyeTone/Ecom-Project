@@ -4,10 +4,10 @@ import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Cart from "./pages/Cart"
+import Cart from "./pages/Cart";
 
 function App() {
-  return <Cart />
+  return <Home />;
 }
 
 export default App;
